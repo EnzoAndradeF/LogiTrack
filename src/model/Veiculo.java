@@ -5,14 +5,12 @@ public abstract class Veiculo {
     private double capacidadeCarga;
     private double combustivelAtual;
 
-    public Veiculo(String placa, double capacidadeCarga, int combustivelAtual) {
+    public Veiculo(String placa, double capacidadeCarga, double combustivelAtual) {
         this.placa = placa;
         this.capacidadeCarga = capacidadeCarga;
         this.combustivelAtual = combustivelAtual;
     }
-    public Veiculo(String placa2, double capacidadeCarga2, double combustivelAtual2) {
-        
-    }
+
     public String getPlaca() {
         return placa;
     }

@@ -1,3 +1,4 @@
+package main;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ import service.GerenciadorViagens;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        GerenciadorViagens gerenciador = new GerenciadorViagens(null);
+        GerenciadorViagens gerenciador = new GerenciadorViagens();
 
         Veiculo van1 = new Van("VAN-123", 1200.0, 10.0, true);
         Veiculo caminhao1 = new Caminhao("CAM-123", 15000, 50.0, 3);
@@ -36,13 +37,14 @@ public class App {
                         System.out.println("Digite o nome do Motorista: ");
                         String nome = scanner.nextLine();
 
-                        System.out.println("Digite a categoria da CNH do motorista (B/D/E");
+                        System.out.println("Digite a categoria da CNH do motorista (B/D/E)");
                         String cnh = scanner.nextLine();
 
                         Motorista motorista = new Motorista(nome, cnh);
 
                         System.out.println("Digite a distância do destino (km)");
                         double distancia = scanner.nextDouble();
+                        scanner.nextLine();
 
                         Veiculo veiculoSelecionado = (opcao == 1) ? van1 : caminhao1;
 
@@ -61,6 +63,7 @@ public class App {
 
                         case 0:
                             System.out.println("Encerrando o sistema LogiTrack...");
+                            break;
                     default:
                         System.out.println("Opção inválida");
                         break;

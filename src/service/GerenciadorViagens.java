@@ -11,8 +11,8 @@ public class GerenciadorViagens {
 
     private ArrayList<Viagem> viagens;
 
-    public GerenciadorViagens(ArrayList<Viagem> viagens) {
-        this.viagens = viagens;
+    public GerenciadorViagens() {
+        this.viagens = new ArrayList<>();
     }
 
 
