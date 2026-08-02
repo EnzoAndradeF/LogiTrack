@@ -3,12 +3,15 @@ package model;
 public abstract class Veiculo {
     private String placa;
     private double capacidadeCarga;
-    private int combustivelAtual;
+    private double combustivelAtual;
 
     public Veiculo(String placa, double capacidadeCarga, int combustivelAtual) {
         this.placa = placa;
         this.capacidadeCarga = capacidadeCarga;
         this.combustivelAtual = combustivelAtual;
+    }
+    public Veiculo(String placa2, double capacidadeCarga2, double combustivelAtual2) {
+        
     }
     public String getPlaca() {
         return placa;
@@ -19,10 +22,10 @@ public abstract class Veiculo {
     public void setCapacidadeCarga(double capacidadeCarga) {
         this.capacidadeCarga = capacidadeCarga;
     }
-    public int getCombustivelAtual() {
+    public double getCombustivelAtual() {
         return combustivelAtual;
     }
-    public void setCombustivelAtual(int combustivelAtual) {
+    public void setCombustivelAtual(double combustivelAtual) {
         this.combustivelAtual = combustivelAtual;
     }
 

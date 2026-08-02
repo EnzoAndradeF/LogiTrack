@@ -9,7 +9,7 @@ public class Van extends Veiculo{
     }
     
 
-    public Van(String placa, double capacidadeCarga, int combustivelAtual, boolean possuiRefrigeracao) {
+    public Van(String placa, double capacidadeCarga, double combustivelAtual, boolean possuiRefrigeracao) {
         super(placa, capacidadeCarga, combustivelAtual);
         this.possuiRefrigeracao = possuiRefrigeracao;
     }

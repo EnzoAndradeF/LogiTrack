@@ -8,7 +8,7 @@ public class Caminhao extends Veiculo {
         return quantidadeEixos;
     }
 
-    public Caminhao(String placa, double capacidadeCarga, int combustivelAtual, int quantidadeEixos) {
+    public Caminhao(String placa, double capacidadeCarga, double combustivelAtual, int quantidadeEixos) {
         super(placa, capacidadeCarga, combustivelAtual);
         this.quantidadeEixos = quantidadeEixos;
     }
