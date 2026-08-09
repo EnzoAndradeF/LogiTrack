@@ -1,4 +1,5 @@
 package main;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -16,10 +17,10 @@ public class App {
 
         Veiculo van1 = new Van("VAN-123", 1200.0, 10.0, true);
         Veiculo caminhao1 = new Caminhao("CAM-123", 15000, 50.0, 3);
-        
+
         int opcao = 0;
 
-        do{
+        do {
             try {
                 System.out.println("\n===== Sistema LogiTrack =====");
                 System.out.println("1. Tentar viagem com a Van (" + van1.getPlaca() + ")");
@@ -52,18 +53,18 @@ public class App {
                             gerenciador.validarEIniciarViagem(veiculoSelecionado, motorista, distancia);
                         } catch (CombustivelInsuficienteException e) {
                             System.out.println("\n🛑 [BLOQUEADO PELO SISTEMA]");
-                            System.err.println(e.getMessage()); 
+                            System.err.println(e.getMessage());
                             System.out.println("Sugestão: Abasteça o veículo ou use outra rota.");
                         }
                         break;
 
-                        case 3:
-                            gerenciador.listarViagens();
-                            break;
+                    case 3:
+                        gerenciador.listarViagens();
+                        break;
 
-                        case 0:
-                            System.out.println("Encerrando o sistema LogiTrack...");
-                            break;
+                    case 0:
+                        System.out.println("Encerrando o sistema LogiTrack...");
+                        break;
                     default:
                         System.out.println("Opção inválida");
                         break;
@@ -71,12 +72,12 @@ public class App {
 
             } catch (InputMismatchException e) {
                 System.out.println("\n❌ Erro: Você digitou um caractere inválido onde um número era esperado.");
-                scanner.nextLine(); 
+                scanner.nextLine();
             }
 
-        } while (opcao != 0);         
-        
+        } while (opcao != 0);
+
         scanner.close();
-    }   
+    }
 
 }
